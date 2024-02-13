@@ -6,6 +6,10 @@
   --seal: #fae7a8;
 }
 
+body {
+  background-color: gray;
+}
+
 .menu-btn-style,
 .menu-hover-style > div {
   background-color: black;
@@ -26,4 +30,22 @@
   background-color: var(--seal);
   color: black;
   transform: rotate(180deg);
+}
+
+.bg-gradient {
+  background-image: linear-gradient(to top, black, transparent);
+}
+
+.hide-scroll {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.footer__nav {
+  color: #556666;
+}
+
+.footer__nav ul li:hover {
+  color: var(--seal);
+  cursor: pointer;
 }
