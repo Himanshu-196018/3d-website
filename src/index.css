@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --seal: #fae7a8;
+}
+
+.menu-btn-style,
+.menu-hover-style > div {
+  background-color: black;
+  color: var(--seal);
+
+  &:hover {
+    background-color: var(--seal);
+    color: black;
+  }
+}
+
+.menu-hover-style > div {
+  transform: rotate(0deg);
+  transition: transform 800ms ease;
+}
+
+.menu-hover-style:hover > div {
+  background-color: var(--seal);
+  color: black;
+  transform: rotate(180deg);
+}
