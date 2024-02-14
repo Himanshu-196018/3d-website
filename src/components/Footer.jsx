@@ -1,9 +1,8 @@
 import Img from "./Img";
+import { cardsData } from "../lib/data";
 // import ProgressBar from "./ProgressBar";
 
 const Footer = ({ handleClick }) => {
-  const img = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
-
   return (
     <footer className="w-full min-h-[400px] absolute bottom-0 right-0 left-0 bg-gradient px-10 pb-10">
       <h2 className="text-5xl text-white font-extrabold">
@@ -11,8 +10,8 @@ const Footer = ({ handleClick }) => {
         PARTNERS
       </h2>
       <div className="flex gap-4 overflow-x-auto mt-6 hide-scroll">
-        {img.map((el) => (
-          <Img key={el} id={el} handleClick={handleClick} />
+        {cardsData.map((el) => (
+          <Img key={el.id} id={el.id} el={el} handleClick={handleClick} />
         ))}
       </div>
 
