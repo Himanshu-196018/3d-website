@@ -6,7 +6,7 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="flex justify-between items-center sm:px-16 px-8 py-4 mx-auto absolute top-0 bg-transparent z-10 right-0 left-0">
+    <header className="flex justify-between items-center sm:px-16 px-8 py-4 mx-auto fixed top-0 bg-transparent z-30 right-0 left-0">
       {isMenuOpen && (
         <Menu
           handleClick={() => {

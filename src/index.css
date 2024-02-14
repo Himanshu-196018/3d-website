@@ -49,3 +49,25 @@ body {
   color: var(--seal);
   cursor: pointer;
 }
+
+.model-view-btn {
+  background-color: var(--seal);
+}
+
+.model-view-btn:hover {
+  cursor: pointer;
+  background-color: gray;
+  color: var(--seal);
+}
+
+.cancel-btn > span {
+  background-color: white;
+  transform: rotate(0deg);
+  transition: transform 700ms ease;
+}
+
+.cancel-btn:hover > span {
+  transform: rotate(180deg);
+  background-color: gray;
+  color: white;
+}
