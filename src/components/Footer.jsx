@@ -1,7 +1,7 @@
 import Img from "./Img";
 // import ProgressBar from "./ProgressBar";
 
-const Footer = () => {
+const Footer = ({ handleClick }) => {
   const img = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
 
   return (
@@ -12,7 +12,7 @@ const Footer = () => {
       </h2>
       <div className="flex gap-4 overflow-x-auto mt-6 hide-scroll">
         {img.map((el) => (
-          <Img key={el} />
+          <Img key={el} id={el} handleClick={handleClick} />
         ))}
       </div>
 

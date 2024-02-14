@@ -3,19 +3,60 @@ import { Canvas } from "@react-three/fiber";
 import { Environment, OrbitControls, Sky } from "@react-three/drei";
 import { Suspense, useState } from "react";
 import Loader from "../components/Loader";
-import Character from "../models/Character";
-import Ground from "../models/Ground";
+import {
+  Character,
+  DragonOne,
+  DragonTwo,
+  Spartan,
+  Woman,
+  Ground,
+} from "../models/model";
 import Footer from "../components/Footer";
 import ModelView from "../components/ModelView";
 import CancelBtn from "../components/CancelBtn";
 
+const models = {
+  Character: Character,
+  DragonOne: DragonOne,
+  DragonTwo: DragonTwo,
+  Spartan: Spartan,
+  Woman: Woman,
+};
+
 const Home = () => {
   const [viewModel, setViewModel] = useState(false);
+  const [model, setModel] = useState("Character");
+
+  const handleClick = (id) => {
+    switch (id) {
+      case 1:
+        setModel("Character");
+        break;
+      case 2:
+        setModel("DragonOne");
+        break;
+      case 3:
+        setModel("DragonTwo");
+        break;
+      case 4:
+        setModel("Spartan");
+        break;
+      case 5:
+        setModel("Woman");
+        break;
+      default:
+        setModel("Character");
+    }
+  };
+
+  const load = () => {
+    const ModelComponent = models[model];
+    return <ModelComponent />;
+  };
 
   return (
     <section className="w-full h-screen relative">
       <ModelView handleClick={() => setViewModel(true)} />
-      {/* <div className="absolute top-28 left-0 right-0 flex items-center justify-center"></div> */}
       <div
         className={`w-full h-full fixed top-0 right-0 ${
           viewModel ? "z-50" : ""
@@ -36,12 +77,12 @@ const Home = () => {
             <Sky scale={100} sunPosition={[0, -1000, 10000]} />
             <Environment preset="city" />
             {viewModel && <OrbitControls />}
-            <Character />
+            {load()}
           </Suspense>
         </Canvas>
       </div>
       <div className="w-full h-[200vh] absolute z-10">
-        <Footer />
+        <Footer handleClick={handleClick} />
       </div>
     </section>
   );

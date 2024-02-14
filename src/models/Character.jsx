@@ -1,7 +1,6 @@
 /* eslint-disable react/no-unknown-property */
 import { useRef, useEffect } from "react";
 import { useAnimations, useGLTF } from "@react-three/drei";
-import { useFrame, useThree } from "@react-three/fiber";
 
 import man from "../assets/walk.glb";
 
@@ -12,7 +11,7 @@ const Character = ({ ...props }) => {
 
   useEffect(() => {
     actions["walk.001"].play();
-  });
+  }, [actions]);
 
   return (
     <group ref={manRef} {...props}>
