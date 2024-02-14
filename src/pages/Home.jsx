@@ -3,20 +3,12 @@ import { Canvas } from "@react-three/fiber";
 import { Environment, OrbitControls, Sky } from "@react-three/drei";
 import { Suspense, useState } from "react";
 import Loader from "../components/Loader";
-import {
-  Character,
-  DragonOne,
-  DragonTwo,
-  Spartan,
-  Woman,
-  Ground,
-} from "../models/model";
+import { DragonOne, DragonTwo, Spartan, Woman, Ground } from "../models/model";
 import Footer from "../components/Footer";
 import ModelView from "../components/ModelView";
 import CancelBtn from "../components/CancelBtn";
 
 const models = {
-  Character: Character,
   DragonOne: DragonOne,
   DragonTwo: DragonTwo,
   Spartan: Spartan,
@@ -25,27 +17,24 @@ const models = {
 
 const Home = () => {
   const [viewModel, setViewModel] = useState(false);
-  const [model, setModel] = useState("Character");
+  const [model, setModel] = useState("Spartan");
 
   const handleClick = (id) => {
     switch (id) {
       case 1:
-        setModel("Character");
-        break;
-      case 2:
         setModel("DragonOne");
         break;
-      case 3:
+      case 2:
         setModel("DragonTwo");
         break;
-      case 4:
+      case 3:
         setModel("Spartan");
         break;
-      case 5:
+      case 4:
         setModel("Woman");
         break;
       default:
-        setModel("Character");
+        setModel("Spartan");
     }
   };
 

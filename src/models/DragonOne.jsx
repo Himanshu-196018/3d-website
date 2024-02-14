@@ -10,7 +10,6 @@ const DragonOne = ({ ...props }) => {
   const { actions } = useAnimations(animations, dragonRef);
 
   useEffect(() => {
-    console.log(actions);
     actions["Qishilong_attack01"].play();
   });
 

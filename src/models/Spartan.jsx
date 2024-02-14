@@ -10,7 +10,7 @@ const Spartan = ({ ...props }) => {
   const { actions } = useAnimations(animations, spartanRef);
 
   useEffect(() => {
-    console.log(actions["Armature|Armature|mixamo.com|Layer0.001"].play());
+    actions["Armature|Armature|mixamo.com|Layer0.001"].play();
   });
 
   return (

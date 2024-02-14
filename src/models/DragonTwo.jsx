@@ -10,7 +10,7 @@ const DragonTwo = ({ ...props }) => {
   const { actions } = useAnimations(animations, dragonRef);
 
   useEffect(() => {
-    console.log(actions["Roar"].play());
+    actions["Roar"].play();
   });
 
   return (
