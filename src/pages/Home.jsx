@@ -7,6 +7,7 @@ import { DragonOne, DragonTwo, Spartan, Woman, Ground } from "../models/model";
 import Footer from "../components/Footer";
 import ModelView from "../components/ModelView";
 import CancelBtn from "../components/CancelBtn";
+import CardDetail from "../components/CardDetail";
 
 const models = {
   DragonOne: DragonOne,
@@ -18,23 +19,29 @@ const models = {
 const Home = () => {
   const [viewModel, setViewModel] = useState(false);
   const [model, setModel] = useState("Spartan");
+  const [detailId, setDetailId] = useState(3);
 
   const handleClick = (id) => {
     switch (id) {
       case 1:
         setModel("DragonOne");
+        setDetailId(id);
         break;
       case 2:
         setModel("DragonTwo");
+        setDetailId(id);
         break;
       case 3:
         setModel("Spartan");
+        setDetailId(id);
         break;
       case 4:
         setModel("Woman");
+        setDetailId(id);
         break;
       default:
         setModel("Spartan");
+        setDetailId(3);
     }
   };
 
@@ -71,6 +78,7 @@ const Home = () => {
         </Canvas>
       </div>
       <div className="w-full h-[200vh] absolute z-10">
+        <CardDetail detailId={detailId} />
         <Footer handleClick={handleClick} />
       </div>
     </section>
