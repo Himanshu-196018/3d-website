@@ -8,15 +8,15 @@ const Ground = () => {
         <planeGeometry args={[1000, 1000]} />
         <MeshReflectorMaterial
           blur={[800, 800]}
-          resolution={1080}
+          resolution={2040}
           mixBlur={0.2}
-          mixStrength={60}
+          mixStrength={30}
           roughness={9}
-          depthScale={0.1}
+          depthScale={0.3}
           minDepthThreshold={0.4}
-          maxDepthThreshold={4}
+          maxDepthThreshold={10}
           color="#2f2f2f"
-          metalness={0.9}
+          metalness={0.8}
           reflectorOffset={0}
         />
       </mesh>

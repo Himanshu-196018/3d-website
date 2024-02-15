@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unknown-property */
 import { Canvas } from "@react-three/fiber";
-import { Environment, Grid, OrbitControls, Sky } from "@react-three/drei";
+import { Environment, Grid, OrbitControls } from "@react-three/drei";
 import { Suspense, useState } from "react";
 import Loader from "../components/Loader";
 import { DragonOne, DragonTwo, Spartan, Woman, Ground } from "../models/model";
@@ -60,11 +60,11 @@ const Home = () => {
       >
         {viewModel && <CancelBtn handleClick={() => setViewModel(false)} />}
         <Canvas
+          shadows
           className="w-full h-screen fixed top-0"
           camera={{ near: 0.1, far: 100 }}
-          fov={30}
         >
-          <color attach={"background"} args={["#15151a"]} />
+          <color attach={"background"} args={["#d3d3d3"]} />
           <Suspense fallback={<Loader />}>
             <directionalLight color={"#ffffff"} intensity={1} />
             <ambientLight intensity={3} />
@@ -81,7 +81,6 @@ const Home = () => {
               infiniteGrid
             />
             <Ground />
-            <Sky scale={10000} sunPosition={[0, -1000000, 0]} />
             <Environment preset="city" />
             {viewModel && (
               <OrbitControls
