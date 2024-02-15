@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unknown-property */
 import { Canvas } from "@react-three/fiber";
-import { Environment, OrbitControls, Sky } from "@react-three/drei";
+import { Environment, Grid, OrbitControls, Sky } from "@react-three/drei";
 import { Suspense, useState } from "react";
 import Loader from "../components/Loader";
 import { DragonOne, DragonTwo, Spartan, Woman, Ground } from "../models/model";
@@ -62,17 +62,35 @@ const Home = () => {
         <Canvas
           className="w-full h-screen fixed top-0"
           camera={{ near: 0.1, far: 100 }}
+          fov={30}
         >
           <color attach={"background"} args={["#15151a"]} />
           <Suspense fallback={<Loader />}>
-            <directionalLight />
+            <directionalLight color={"#ffffff"} intensity={1} />
             <ambientLight intensity={3} />
             <hemisphereLight />
 
+            <Grid
+              position={[0, -1.98, 0]}
+              cellSize={0.675}
+              cellColor={"#9f9f9f"}
+              sectionSize={2.7}
+              sectionColor={"#888888"}
+              fadeDistance={40}
+              fadeStrength={4}
+              infiniteGrid
+            />
             <Ground />
-            <Sky scale={100} sunPosition={[0, -1000, 10000]} />
+            <Sky scale={10000} sunPosition={[0, -1000000, 0]} />
             <Environment preset="city" />
-            {viewModel && <OrbitControls />}
+            {viewModel && (
+              <OrbitControls
+                maxPolarAngle={Math.PI / 1.8}
+                minPolarAngle={0.5}
+                maxDistance={10}
+                minDistance={3}
+              />
+            )}
             {load()}
           </Suspense>
         </Canvas>
