@@ -1,6 +1,5 @@
 import About from "./About";
 import Home from "./Home";
-import OurTeam from "./OurTeam";
-import Press from "./Press";
+import Nft from "./Nft";
 
-export { About, Home, OurTeam, Press };
+export { About, Home, Nft };

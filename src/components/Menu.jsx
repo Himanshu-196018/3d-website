@@ -23,37 +23,37 @@ const Menu = ({ handleClick }) => {
           </div>
           <div className="flex items-center justify-between mt-14">
             <nav className="flex flex-col font-bold text-6xl text-white">
-              <NavLink
-                to="/"
+              <a
+                href="#"
                 className="hover:text-[#fae7a8]"
                 onClick={handleClick}
               >
                 <p>HOME</p>
-              </NavLink>
+              </a>
 
-              <NavLink
-                to="/about"
+              <a
+                href="#about"
                 className="hover:text-[#fae7a8]"
                 onClick={handleClick}
               >
                 <p>ABOUT</p>
-              </NavLink>
+              </a>
 
-              <NavLink
-                to="/ourteam"
+              <a
+                href="#nft"
+                className="hover:text-[#fae7a8]"
+                onClick={handleClick}
+              >
+                <p>NFT</p>
+              </a>
+
+              <a
+                href="#our-team"
                 className="hover:text-[#fae7a8]"
                 onClick={handleClick}
               >
                 <p>OUR TEAM</p>
-              </NavLink>
-
-              <NavLink
-                to="/press"
-                className="hover:text-[#fae7a8]"
-                onClick={handleClick}
-              >
-                <p>PRESS</p>
-              </NavLink>
+              </a>
             </nav>
           </div>
         </div>
