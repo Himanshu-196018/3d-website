@@ -14,7 +14,13 @@ const Navbar = () => {
           }}
         />
       )}
-      <h1 className="text-3xl font-bold">Logo</h1>
+      <div className="h-10 w-auto">
+        <img
+          src="/images/logo.png"
+          alt="Meta Tech Logo"
+          className="h-full w-auto"
+        />
+      </div>
       <button
         className="w-[3.25rem] h-[3.25rem] text-xl rounded-full flex items-center justify-center menu-btn-style"
         onClick={() => setIsMenuOpen(true)}
