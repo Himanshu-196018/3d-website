@@ -4,7 +4,6 @@ export const cardsData = [
     src: "/images/dragon1.png",
     alt: "Image of model dragon 1",
     name: "Dragon White",
-    price: "$50",
     des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, beatae!",
   },
   {
@@ -12,7 +11,6 @@ export const cardsData = [
     src: "/images/dragon2.png",
     alt: "Image of model dragon 2",
     name: "Dragon",
-    price: "$65",
     des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, beatae!",
   },
   {
@@ -20,7 +18,6 @@ export const cardsData = [
     src: "/images/spartan.png",
     alt: "Image of model spartan",
     name: "Spartan Fighter",
-    price: "$48",
     des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, beatae!",
   },
   {
@@ -28,7 +25,6 @@ export const cardsData = [
     src: "/images/woman.png",
     alt: "Image of model woman",
     name: "Cyber Women",
-    price: "$56",
     des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, beatae!",
   },
 ];

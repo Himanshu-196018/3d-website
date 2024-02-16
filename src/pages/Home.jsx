@@ -8,6 +8,7 @@ import Footer from "../components/Footer";
 import ModelView from "../components/ModelView";
 import CancelBtn from "../components/CancelBtn";
 import CardDetail from "../components/CardDetail";
+import { About } from "../pages";
 
 const models = {
   DragonOne: DragonOne,
@@ -94,8 +95,9 @@ const Home = () => {
           </Suspense>
         </Canvas>
       </div>
-      <div className="w-full h-[200vh] absolute z-10">
+      <div className="w-full min-h-screen absolute z-10">
         <CardDetail detailId={detailId} />
+        <About />
         <Footer handleClick={handleClick} />
       </div>
     </section>
