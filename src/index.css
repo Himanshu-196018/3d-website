@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200..1000&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -8,6 +10,7 @@
 
 body {
   background-color: gray;
+  font-family: Nunito, sans-serif;
 }
 
 .menu-btn-style,
@@ -51,13 +54,19 @@ body {
 }
 
 .model-view-btn {
-  background-color: var(--seal);
+  background-color: black;
+  color: var(--seal);
 }
 
 .model-view-btn:hover {
   cursor: pointer;
-  background-color: gray;
-  color: var(--seal);
+  background-color: var(--seal);
+  color: black;
+}
+
+.roadmap-btn:hover > span {
+  background-color: var(--seal);
+  color: black;
 }
 
 .cancel-btn > span {
@@ -90,5 +99,17 @@ body {
 
   &:hover {
     background: linear-gradient(to right, #3ba4a6 35%, #518eff 88%);
+  }
+}
+
+@layer utilities {
+  .head-text {
+    @apply md:text-3xl text-2xl mb-3 font-bold;
+  }
+  .sub-head-text {
+    @apply md:text-2xl text-xl mb-2 font-semibold;
+  }
+  .para-text {
+    @apply md:text-xl text-lg mb-6;
   }
 }

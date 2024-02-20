@@ -17,10 +17,10 @@ const Bgm = () => {
 
   return (
     <button
-      className="w-14 h-14 fixed bottom-10 right-10 rounded-full flex items-center justify-center model-view-btn z-20 text-xl"
+      className="w-14 h-14 absolute right-6 lg:right-16 rounded-full flex items-center justify-center model-view-btn text-xl"
       onClick={handleClick}
     >
-      <audio ref={audioRef} src="./MainTheme.mp3"></audio>
+      <audio ref={audioRef} src="./MainTheme.mp3" loop autoPlay />
       {isPlaying ? <MdMusicOff /> : <MdMusicNote />}
     </button>
   );

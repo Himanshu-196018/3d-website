@@ -10,6 +10,7 @@ import CancelBtn from "../components/CancelBtn";
 import CardDetail from "../components/CardDetail";
 import { About, Nft } from "../pages";
 import Bgm from "../components/Bgm";
+import RoadmapBtn from "../components/RoadmapBtn";
 
 const models = {
   DragonOne: DragonOne,
@@ -18,7 +19,7 @@ const models = {
   Woman: Woman,
 };
 
-const Home = () => {
+const Home = ({ handleRoadmapClick }) => {
   const [viewModel, setViewModel] = useState(false);
   const [model, setModel] = useState("Spartan");
   const [detailId, setDetailId] = useState(3);
@@ -54,8 +55,11 @@ const Home = () => {
 
   return (
     <section className="w-full h-screen relative">
-      <ModelView handleClick={() => setViewModel(true)} />
-      <Bgm />
+      <div className="w-full fixed bottom-10 z-20 flex px-6 lg:px-16">
+        <RoadmapBtn handleClick={handleRoadmapClick} />
+        <ModelView handleClick={() => setViewModel(true)} />
+        <Bgm />
+      </div>
       <div
         className={`w-full h-full fixed top-0 right-0 ${
           viewModel ? "z-50" : ""
