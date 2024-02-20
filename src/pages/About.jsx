@@ -1,4 +1,12 @@
+import { useState } from "react";
+
 const About = () => {
+  const [showDetail, setShowDetail] = useState(true);
+
+  const handleClick = () => {
+    setShowDetail(!showDetail);
+  };
+
   return (
     <section
       id="about"
@@ -6,7 +14,7 @@ const About = () => {
     >
       <h2 className="text-5xl font-semibold text-center mt-10">About Us</h2>
       <div className="mt-14 w-full flex flex-col items-center justify-between lg:flex-row">
-        <div className="h-auto w-1/2 flex items-center justify-center  mb-20 lg:mb-0">
+        <div className="w-1/2 h-[400px] flex items-center justify-center  mb-20 lg:mb-0 lg:self-start">
           <img
             src="/images/about-img.png"
             alt="About Image"
@@ -17,22 +25,87 @@ const About = () => {
         </div>
 
         <div className="w-full pr-0 text-center lg:text-left lg:w-1/2 lg:pr-14">
-          <h3 className="text-xl mb-2">Who We Are</h3>
-          <h3 className="text-5xl mb-10">Explore the space & ready to play.</h3>
-          <p className="mb-4 text-xl">
-            Meta Tech is a Financial Universe aims to support the Global
-            Community and boost the well being of its’ each member. Meta Tech
-            Ecosystems is fuel by its public blockchain.
-            <br />
-            <br />
-            It is a highly performant open-source blockchain platform, built to
-            support and operate safe, compliant, and predictable digital
-            infrastructures.
-            <br />
-            <br />
-            It is the most flexible and scalable blockchain platform in the
-            world. It makes blockchain development simple and seamless.
-          </p>
+          <div className={showDetail ? "h-[500px] overflow-hidden" : "h-full"}>
+            <h3 className="text-3xl mb-3">
+              Welcome to MTC Club - Where Imagination Meets Reality in the
+              Metaverse!
+            </h3>
+            <p className="text-xl mb-6">
+              At MTC Club, we believe in creating more than just a game; we are
+              building an immersive metaverse that transcends boundaries,
+              offering a dynamic and captivating virtual world for players to
+              explore, build, and thrive. Our vision is to provide an open and
+              expansive environment that mirrors the complexity and beauty of
+              the real world, empowering players to shape their destinies, forge
+              empires, and embark on extraordinary adventures.
+            </p>
+            <h3 className="text-3xl mb-3">Our Mission</h3>
+            <h4 className="text-2xl mb-4">Innovation and Immersion:</h4>
+            <p className="text-xl mb-6">
+              We are committed to pushing the boundaries of what&apos;s possible
+              in the virtual realm. Through cutting-edge technology and
+              innovative gameplay features, we aim to deliver an unparalleled
+              metaverse experience that captivates the imagination of players
+              worldwide.
+            </p>
+            <h4 className="text-2xl mb-4">Player-Centric Approach:</h4>
+            <p className="text-xl mb-6">
+              At the heart of MTC Club is our dedication to our players. We
+              strive to create a community-driven space where every
+              player&apos;s journey is unique, and every decision matters. The
+              metaverse is not just a game; it&apos;s a canvas for your
+              creativity, a stage for your achievements, and a world where your
+              presence shapes the narrative.
+            </p>
+            <h4 className="text-2xl mb-4">
+              Blockchain Integration for Trust and Ownership:
+            </h4>
+            <p className="text-xl mb-6">
+              We embrace blockchain technology to provide a secure and
+              transparent environment for our players. Every virtual asset, from
+              NFT characters to in-game properties, is securely recorded on the
+              blockchain, ensuring true ownership, scarcity, and authenticity.
+            </p>
+            <h3 className="text-3xl mb-3">What Sets Us Apart?</h3>
+            <h4 className="text-2xl mb-4">Realism Meets Fantasy:</h4>
+            <p className="text-xl mb-6">
+              MTC Club blends the realism of a dynamic economy, diverse
+              environments, and player-driven empires with the fantasy of unique
+              NFT characters, engaging quests, and a world filled with
+              mysteries. Our commitment to realism creates a metaverse that
+              evolves with time, just like the real world.
+            </p>
+            <h4 className="text-2xl mb-4">Community at its Core:</h4>
+            <p className="text-xl mb-6">
+              We believe in the power of community. MTC Club is more than a
+              game; it&apos;s a social hub where players collaborate, compete,
+              and create lasting connections. Our in-game social spaces,
+              collaborative workspaces, and dynamic events foster a vibrant and
+              inclusive community
+            </p>
+            <h4 className="text-2xl mb-4">Endless Possibilities:</h4>
+            <p className="text-xl mb-6">
+              Your journey in MTC Club is bound only by your imagination.
+              Whether you aspire to build a business empire, lead a
+              technological revolution, or embark on epic quests, the metaverse
+              provides endless possibilities. Every decision you make shapes the
+              course of your adventure.
+            </p>
+            <h3 className="text-3xl mb-3">Join Us on the Journey!</h3>
+            <p className="text-xl mb-6">
+              Embark on an extraordinary journey in the MTC Club metaverse.
+              Discover uncharted territories, build empires, engage in thrilling
+              quests, and become part of a vibrant community. The future of
+              gaming is here, and it&apos;s waiting for you!
+            </p>
+          </div>
+
+          <button
+            className="more-btn h-12 w-36 rounded-lg mt-6"
+            onClick={handleClick}
+          >
+            {showDetail ? "Show More" : "Show Less"}
+          </button>
         </div>
       </div>
     </section>

@@ -1,4 +1,12 @@
-const nft = () => {
+import { useState } from "react";
+
+const Nft = () => {
+  const [showDetail, setShowDetail] = useState(false);
+
+  const handleClick = () => {
+    setShowDetail(!showDetail);
+  };
+
   return (
     <section
       className="w-full bg-black/20 text-white pt-10 pb-20 px-20"
@@ -6,7 +14,7 @@ const nft = () => {
     >
       <h2 className="text-5xl font-semibold text-center mt-10">NFT</h2>
       <div className="mt-14 w-full flex flex-col items-center justify-between lg:flex-row">
-        <div className="h-auto w-full md:w-1/2 flex items-center justify-center mb-20 lg:mb-0">
+        <div className="w-full h-[450px] md:w-1/2 flex items-center justify-center mb-20 lg:mb-0 lg:self-start">
           <img
             src="/images/vr-girl.png"
             alt="Nft Image"
@@ -15,30 +23,79 @@ const nft = () => {
             className="animate-up-down"
           />
         </div>
+
         <div className="w-full pr-0 text-center lg:text-left lg:w-1/2 lg:pr-14">
-          <h3 className="text-xl mb-2">Metatech NFT</h3>
-          <h3 className="text-5xl mb-10">
-            Diversity, Security, and Reliability All in one place
-          </h3>
-          <p className="mb-4 text-xl">
-            NFTs are currently taking the digital art and collectibles world by
-            storm. Digital artists are seeing their lives change thanks to huge
-            sales to a new crypto-audience. And celebrities are joining in as
-            they spot a new opportunity to connect with fans. But digital art is
-            only one way to use NFTs. Really they can be used to represent
-            ownership of any unique asset, like a deed for an item in the
-            digital or physical realm.
-            <br />
-            <br />
-            If Andy Warhol had been born in the late 90s, he probably would have
-            minted Campbell's Soup as an NFT. It's only a matter of time before
-            Nike puts a run of Jordans on Ethereum. And one day owning your car
-            might be proved with an NFT.
-          </p>
+          <div className={showDetail ? "h-full" : "h-[500px] overflow-hidden"}>
+            <h3 className="text-3xl mb-3">3D NFT Characters:</h3>
+            <h4 className="text-2xl mb-4">Unleash Your Unique Avatar</h4>
+            <p className="text-xl mb-6">
+              Welcome to a realm of boundless creativity and personalization
+              with our exceptional 3D NFT Characters. Each character within the
+              MTC Club metaverse is more than a mere avatar; it&apos;s a true
+              masterpiece, carefully crafted to be a visual representation of
+              your virtual identity.
+            </p>
+            <h4 className="text-2xl mb-4">Aesthetic Brilliance:</h4>
+            <p className="text-xl mb-6">
+              Immerse yourself in the sheer beauty of visually stunning 3D NFT
+              characters. From intricate details to vibrant aesthetics, these
+              avatars are not just a reflection but an extension of your
+              creativity.
+            </p>
+            <h4 className="text-2xl mb-4">Unparalleled Uniqueness:</h4>
+            <p className="text-xl mb-6">
+              No two characters are alike. Each 3D NFT character is a unique
+              creation, ensuring that your avatar stands out in the vast expanse
+              of the metaverse. Express yourself with a character that is as
+              distinctive as you are.
+            </p>
+            <h4 className="text-2xl mb-4">Dynamic Abilities:</h4>
+            <p className="text-xl mb-6">
+              Beyond appearances, our 3D NFT Characters come to life with unique
+              abilities. Whether you&apos;re inclined towards entrepreneurship,
+              exploration, or technological prowess, your chosen character is
+              equipped with skills that align with your virtual journey.
+            </p>
+            <h4 className="text-2xl mb-4">Captivating Backstories:</h4>
+            <p className="text-xl mb-6">
+              Every character is more than meets the eye. Dive into captivating
+              backstories that add depth to your virtual persona. Whether
+              you&apos;re a daring explorer uncovering ancient mysteries or a
+              visionary entrepreneur building a digital empire, the narrative
+              elements enrich your gaming experience.
+            </p>
+            <h4 className="text-2xl mb-4">Choose Your Path:</h4>
+            <p className="text-xl mb-6">
+              Whether you see yourself as a futuristic entrepreneur shaping the
+              virtual economy, an intrepid explorer charting unexplored
+              territories, or a technological wizard pushing the boundaries of
+              innovation, there&apos;s a 3D NFT character waiting to resonate
+              with your aspirations.
+            </p>
+            <h4 className="text-2xl mb-4">Your Avatar, Your Identity:</h4>
+            <p className="text-xl mb-6">
+              In the MTC Club metaverse, your 3D NFT character isn&apos;t just a
+              representation; it&apos;s your identity. Make a statement, forge
+              alliances, and leave an indelible mark on the virtual landscape
+              with an avatar that is uniquely, undeniably you.
+            </p>
+            <h4 className="text-2xl mb-4">Unveil Your Avatar Now!</h4>
+            <p className="text-xl mb-6">
+              Dive into a world where creativity knows no bounds. Choose your 3D
+              NFT character today and embark on a virtual journey that reflects
+              your individuality
+            </p>
+          </div>
+          <button
+            className="more-btn h-12 w-36 rounded-lg mt-6"
+            onClick={handleClick}
+          >
+            {showDetail ? "Show Less" : "Show More"}
+          </button>
         </div>
       </div>
     </section>
   );
 };
 
-export default nft;
+export default Nft;

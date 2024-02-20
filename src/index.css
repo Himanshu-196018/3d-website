@@ -84,3 +84,11 @@ body {
     transform: translateY(30px);
   }
 }
+
+.more-btn {
+  background: linear-gradient(to right, #518eff 35%, #3ba4a6 88%);
+
+  &:hover {
+    background: linear-gradient(to right, #3ba4a6 35%, #518eff 88%);
+  }
+}
