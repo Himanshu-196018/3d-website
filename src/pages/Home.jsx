@@ -9,6 +9,7 @@ import ModelView from "../components/ModelView";
 import CancelBtn from "../components/CancelBtn";
 import CardDetail from "../components/CardDetail";
 import { About, Nft } from "../pages";
+import Bgm from "../components/Bgm";
 
 const models = {
   DragonOne: DragonOne,
@@ -54,6 +55,7 @@ const Home = () => {
   return (
     <section className="w-full h-screen relative">
       <ModelView handleClick={() => setViewModel(true)} />
+      <Bgm />
       <div
         className={`w-full h-full fixed top-0 right-0 ${
           viewModel ? "z-50" : ""
