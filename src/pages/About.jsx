@@ -25,7 +25,7 @@ const About = () => {
         </div>
 
         <div className="w-full pr-0 text-center lg:text-left lg:w-1/2 lg:pr-14">
-          <div className={showDetail ? "h-[500px] overflow-hidden" : "h-full"}>
+          <div className={showDetail ? "h-[300px] overflow-hidden" : "h-full"}>
             <h3 className="head-text">
               Welcome to MTC Club - Where Imagination Meets Reality in the
               Metaverse!

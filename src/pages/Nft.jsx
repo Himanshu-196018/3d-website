@@ -18,14 +18,14 @@ const Nft = () => {
           <img
             src="/images/vr-girl.png"
             alt="Nft Image"
-            width={400}
-            height={400}
+            width={300}
+            height={300}
             className="animate-up-down"
           />
         </div>
 
         <div className="w-full pr-0 text-center lg:text-left lg:w-1/2 lg:pr-14">
-          <div className={showDetail ? "h-full" : "h-[500px] overflow-hidden"}>
+          <div className={showDetail ? "h-full" : "h-[220px] overflow-hidden"}>
             <h3 className="head-text">3D NFT Characters:</h3>
             <h4 className="sub-head-text">Unleash Your Unique Avatar</h4>
             <p className="para-text">

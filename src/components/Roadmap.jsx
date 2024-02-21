@@ -28,7 +28,7 @@ const Roadmap = ({ handleClick }) => {
                   alt={el.alt}
                   height={250}
                   width={250}
-                  className="md:w-64 w-96"
+                  className="md:w-64 w-96 rounded-xl"
                 />
                 <div className="text-white max-w-96 md:w-64">
                   <h3 className="text-xl mb-4 font-bold">{el.heading}</h3>
