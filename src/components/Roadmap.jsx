@@ -3,7 +3,7 @@ import { roadmapData } from "../lib/data";
 
 const Roadmap = ({ handleClick }) => {
   return (
-    <section className="w-full h-screen absolute top-0 left-0 right-0 bg-black/30 z-50 overflow-scroll">
+    <section className="w-full h-screen absolute top-0 left-0 right-0 bg-black/30 z-50 overflow-y-auto">
       <div className="xl:w-1/2 lg:w-3/4 w-full min-h-screen bg-[#212121] md:pl-14 md:pt-14 pl-10 pt-10 pb-20">
         <div className="w-full flex items-center justify-between pr-6 mb-14">
           <h2 className="text-normal text-white font-bold">OUR ROADMAP</h2>
@@ -14,8 +14,9 @@ const Roadmap = ({ handleClick }) => {
             </div>
           </button>
         </div>
-        <div className="mt-10 w-full lg:px-14 md:px-20 px-10 relative">
-          <div className="w-[2px] h-full bg-[#fae7a8] absolute left-6" />
+        <div className="mt-10 w-full lg:px-14 md:px-20 px-10 relative pt-2">
+          <div className="w-4 h-4 bg-[#212121] border-2 border-[#fae7a8] absolute left-[18px] rounded-full" />
+          <div className="w-[2px] h-full bg-[#fae7a8] absolute left-6 top-6" />
           {roadmapData.map((el) => {
             return (
               <div
@@ -33,8 +34,8 @@ const Roadmap = ({ handleClick }) => {
                   <h3 className="text-xl mb-4 font-bold">{el.heading}</h3>
                   <p className="m-0 text-base">{el.text}</p>
                 </div>
-                <div className="absolute left-5 w-[9px] h-[9px] rounded-full border border-[#fae7a8] bg-[#212121] flex items-center justify-center">
-                  <div className="w-1 h-1 bg-white rounded-full" />
+                <div className="absolute left-[21px] w-2 h-2 rounded-full border border-[#fae7a8] bg-[#212121] flex items-center justify-center">
+                  <div className="w-[3px] h-[3px] bg-white rounded-full" />
                 </div>
               </div>
             );
