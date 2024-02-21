@@ -28,3 +28,76 @@ export const cardsData = [
     des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, beatae!",
   },
 ];
+
+export const roadmapData = [
+  {
+    id: 1,
+    src: "/images/img1.jpg",
+    alt: "PlaceHolder Image",
+    heading: "Lorem Ipsum",
+    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit distinctio qui.",
+  },
+  {
+    id: 2,
+    src: "/images/img1.jpg",
+    alt: "PlaceHolder Image",
+    heading: "Lorem Ipsum",
+    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit distinctio qui.",
+  },
+  {
+    id: 3,
+    src: "/images/img1.jpg",
+    alt: "PlaceHolder Image",
+    heading: "Lorem Ipsum",
+    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit distinctio qui.",
+  },
+  {
+    id: 4,
+    src: "/images/img1.jpg",
+    alt: "PlaceHolder Image",
+    heading: "Lorem Ipsum",
+    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit distinctio qui.",
+  },
+  {
+    id: 5,
+    src: "/images/img1.jpg",
+    alt: "PlaceHolder Image",
+    heading: "Lorem Ipsum",
+    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit distinctio qui.",
+  },
+  {
+    id: 6,
+    src: "/images/img1.jpg",
+    alt: "PlaceHolder Image",
+    heading: "Lorem Ipsum",
+    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit distinctio qui.",
+  },
+  {
+    id: 7,
+    src: "/images/img1.jpg",
+    alt: "PlaceHolder Image",
+    heading: "Lorem Ipsum",
+    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit distinctio qui.",
+  },
+  {
+    id: 8,
+    src: "/images/img1.jpg",
+    alt: "PlaceHolder Image",
+    heading: "Lorem Ipsum",
+    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit distinctio qui.",
+  },
+  {
+    id: 9,
+    src: "/images/img1.jpg",
+    alt: "PlaceHolder Image",
+    heading: "Lorem Ipsum",
+    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit distinctio qui.",
+  },
+  {
+    id: 10,
+    src: "/images/img1.jpg",
+    alt: "PlaceHolder Image",
+    heading: "Lorem Ipsum",
+    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit distinctio qui.",
+  },
+];
