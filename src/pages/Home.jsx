@@ -53,6 +53,8 @@ const Home = ({ handleRoadmapClick }) => {
     return <ModelComponent />;
   };
 
+  // scroll animation
+
   return (
     <section className="w-full h-screen relative">
       <div className="w-full fixed bottom-10 z-20 flex px-6 lg:px-16">
