@@ -16,10 +16,12 @@ const Footer = ({ handleClick }) => {
 
       <div className="mt-12 pb-16  w-full flex items-center justify-center border-b border-gray-300 lg:flex-row flex-col">
         <div className="px-4 pb-6 lg:pb-0 text-center lg:text-left lg:w-1/2">
-          <h2 className="font-extrabold text-4xl text-blue-700">MTC CLUB</h2>
+          <figure className="w-32 h-20 bg-white rounded-xl flex items-center justify-center">
+            <img src="/images/logo.png" alt="MTC club Logo" width={100} />
+          </figure>
           <p className="text-xl text-white mt-4">
-            Metatech is a hoistic virtal world where impossible is nothing Get
-            immersed into a world if possibilities with METATECH and interact,
+            MTC club is a hoistic virtal world where impossible is nothing Get
+            immersed into a world if possibilities with MTC CLUB and interact,
             buy, sell, party in a world of freedom and tranquility.
           </p>
         </div>
@@ -118,7 +120,7 @@ const Footer = ({ handleClick }) => {
       </div>
 
       <div className="mt-10 flex flex-col md:flex-row font-semibold items-center justify-center">
-        <p className="text-sm text-gray-400 md:mr-40 ">2024 | Lorem</p>
+        <p className="text-sm text-gray-400 md:mr-40 ">2024 | MTC CLUB</p>
         <p className="text-sm text-gray-400">
           STYLED BY{" "}
           <a
