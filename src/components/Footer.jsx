@@ -16,10 +16,7 @@ const Footer = ({ handleClick }) => {
 
       <div className="mt-12 pb-16  w-full flex items-center justify-center border-b border-gray-300 lg:flex-row flex-col">
         <div className="px-4 pb-6 lg:pb-0 text-center lg:text-left lg:w-1/2">
-          <h2 className="font-extrabold text-4xl text-blue-700">
-            MetaTech <br />
-            Coin
-          </h2>
+          <h2 className="font-extrabold text-4xl text-blue-700">MTC CLUB</h2>
           <p className="text-xl text-white mt-4">
             Metatech is a hoistic virtal world where impossible is nothing Get
             immersed into a world if possibilities with METATECH and interact,
