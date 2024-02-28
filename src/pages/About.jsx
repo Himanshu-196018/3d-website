@@ -8,24 +8,10 @@ const About = () => {
   };
 
   return (
-    <section
-      id="about"
-      className="bg-[#666666]/20 text-white pt-10 pb-20 px-6 md:px-20"
-    >
-      <h2 className="text-5xl font-semibold text-center mt-10">About Us</h2>
-      <div className="mt-14 w-full flex flex-col items-center justify-between lg:flex-row">
-        <div className="w-full flex items-center justify-center  mb-20 lg:mb-0 lg:self-start lg:w-1/2 lg:mt-10">
-          <img
-            src="/images/about-img.png"
-            alt="About Image"
-            width={400}
-            height={400}
-            className="animate-up-down"
-          />
-        </div>
-
-        <div className="w-full pr-0 text-center lg:text-left lg:w-1/2 lg:pr-14">
-          <div className={showDetail ? "h-[300px] overflow-hidden" : "h-full"}>
+    <section id="about" className="w-full text-white">
+      <div className="min-h-screen flex flex-col items-start justify-center md:items-end">
+        <div className="w-1/4 md:w-1/2 lg:w-1/3">
+          <div className={showDetail ? "h-[200px] overflow-hidden" : "h-full"}>
             <h3 className="head-text">
               Welcome to MTC Club - Where Imagination Meets Reality in the
               Metaverse!

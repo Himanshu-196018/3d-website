@@ -7,11 +7,14 @@ const App = () => {
   const [isRoadmapOpen, setIsRoadmapOpen] = useState(false);
 
   return (
-    <main
-      className={`bg-slate-300/20 relative ${
-        isRoadmapOpen ? "overflow-hidden" : ""
-      }`}
-    >
+    <main className={`relative ${isRoadmapOpen ? "overflow-hidden" : ""}`}>
+      <video
+        autoPlay
+        loop
+        muted
+        id="video"
+        src="/videos/bg-night-sky.mp4"
+      ></video>
       <Navbar />
       <Home handleRoadmapClick={() => setIsRoadmapOpen(true)} />
       {isRoadmapOpen && <Roadmap handleClick={() => setIsRoadmapOpen(false)} />}

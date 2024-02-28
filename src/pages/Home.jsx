@@ -3,60 +3,19 @@ import { Canvas } from "@react-three/fiber";
 import { Environment, Grid, OrbitControls } from "@react-three/drei";
 import { Suspense, useState } from "react";
 import Loader from "../components/Loader";
-import { DragonOne, DragonTwo, Spartan, Woman, Ground } from "../models/model";
+import { DragonTwo, Ground } from "../models/model";
 import Footer from "../components/Footer";
 import ModelView from "../components/ModelView";
 import CancelBtn from "../components/CancelBtn";
-import CardDetail from "../components/CardDetail";
 import { About, Nft } from "../pages";
 import Bgm from "../components/Bgm";
 import RoadmapBtn from "../components/RoadmapBtn";
 
-const models = {
-  DragonOne: DragonOne,
-  DragonTwo: DragonTwo,
-  Spartan: Spartan,
-  Woman: Woman,
-};
-
 const Home = ({ handleRoadmapClick }) => {
   const [viewModel, setViewModel] = useState(false);
-  const [model, setModel] = useState("Spartan");
-  const [detailId, setDetailId] = useState(3);
-
-  const handleClick = (id) => {
-    switch (id) {
-      case 1:
-        setModel("DragonOne");
-        setDetailId(id);
-        break;
-      case 2:
-        setModel("DragonTwo");
-        setDetailId(id);
-        break;
-      case 3:
-        setModel("Spartan");
-        setDetailId(id);
-        break;
-      case 4:
-        setModel("Woman");
-        setDetailId(id);
-        break;
-      default:
-        setModel("Spartan");
-        setDetailId(3);
-    }
-  };
-
-  const load = () => {
-    const ModelComponent = models[model];
-    return <ModelComponent />;
-  };
-
-  // scroll animation
 
   return (
-    <section className="w-full h-screen relative">
+    <section className="w-full h-screen relative bg-transparent">
       <div className="w-full fixed bottom-10 z-20 flex px-6 lg:px-16">
         <RoadmapBtn handleClick={handleRoadmapClick} />
         <ModelView handleClick={() => setViewModel(true)} />
@@ -69,11 +28,9 @@ const Home = ({ handleRoadmapClick }) => {
       >
         {viewModel && <CancelBtn handleClick={() => setViewModel(false)} />}
         <Canvas
-          shadows
-          className="w-full h-screen fixed top-0"
+          className="w-full h-screen fixed top-0 bg-transparent"
           camera={{ near: 0.1, far: 100 }}
         >
-          <color attach={"background"} args={["#d3d3d3"]} />
           <Suspense fallback={<Loader />}>
             <directionalLight color={"#ffffff"} intensity={1} />
             <ambientLight intensity={3} />
@@ -99,15 +56,15 @@ const Home = ({ handleRoadmapClick }) => {
                 minDistance={3}
               />
             )}
-            {load()}
+            <DragonTwo />
           </Suspense>
         </Canvas>
       </div>
-      <div className="w-full min-h-screen absolute z-10">
-        <CardDetail detailId={detailId} />
+      <div className="w-full min-h-screen absolute z-10 bg-transparent">
+        <div className="h-screen" />
         <About />
         <Nft />
-        <Footer handleClick={handleClick} />
+        <Footer />
       </div>
     </section>
   );

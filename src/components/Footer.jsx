@@ -1,18 +1,11 @@
-import Img from "./Img";
-import { cardsData } from "../lib/data";
-
 const Footer = ({ handleClick }) => {
   return (
-    <footer className="w-full min-h-[400px] mt-10 bg-gradient px-10 pb-10">
+    <footer className="w-full min-h-[400px] mt-10 bg-gradient px-10 pb-6">
       <h2 className="text-5xl text-white font-extrabold">
         OUR <br />
         PARTNERS
       </h2>
-      <div className="flex gap-4 overflow-x-auto mt-6 hide-scroll border-b border-white pb-14">
-        {cardsData.map((el) => (
-          <Img key={el.id} id={el.id} el={el} handleClick={handleClick} />
-        ))}
-      </div>
+      <div className="border-b border-white pb-14" />
 
       <div className="mt-12 pb-16  w-full flex items-center justify-center border-b border-gray-300 lg:flex-row flex-col">
         <div className="px-4 pb-6 lg:pb-0 text-center lg:text-left lg:w-1/2">

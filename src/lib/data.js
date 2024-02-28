@@ -1,34 +1,3 @@
-export const cardsData = [
-  {
-    id: 1,
-    src: "/images/dragon1.png",
-    alt: "Image of model dragon 1",
-    name: "White Dragon",
-    des: "A majestic force in the metaverse, White Dragon soars with ethereal grace. This 3D NFT character commands the skies, embodying mystery, power, and an enchanting presence in every quest",
-  },
-  {
-    id: 2,
-    src: "/images/dragon2.png",
-    alt: "Image of model dragon 2",
-    name: "Dragon",
-    des: "An embodiment of mythical might, Dragon dominates the metaverse with scales that glisten in the digital sun. Unleash this 3D NFT character's fiery prowess in epic adventures and conquests.",
-  },
-  {
-    id: 3,
-    src: "/images/spartan.png",
-    alt: "Image of model spartan",
-    name: "Spartan Fighter",
-    des: "Meet the indomitable Spartan Fighter, a 3D NFT character of unwavering strength and strategic prowess. In the metaverse, embark on epic quests and conquer challenges with Spartan honor.",
-  },
-  {
-    id: 4,
-    src: "/images/woman.png",
-    alt: "Image of model woman",
-    name: "Cyber Women",
-    des: "Step into the future with Cyber Women, a 3D NFT character seamlessly blending elegance and cybernetic prowess. In the metaverse, she navigates digital realms with unmatched grace and technological mastery.",
-  },
-];
-
 export const roadmapData = [
   {
     id: "phase1",

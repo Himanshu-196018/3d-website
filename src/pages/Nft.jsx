@@ -8,24 +8,10 @@ const Nft = () => {
   };
 
   return (
-    <section
-      className="w-full bg-black/20 text-white pt-10 pb-20 px-6 md:px-20"
-      id="nft"
-    >
-      <h2 className="text-5xl font-semibold text-center mt-10">NFT</h2>
-      <div className="mt-14 w-full flex flex-col items-center justify-between lg:flex-row">
-        <div className="w-full md:w-1/2 flex items-center justify-center mb-20 lg:mb-0 lg:self-start lg:mt-10">
-          <img
-            src="/images/vr-girl.png"
-            alt="Nft Image"
-            width={300}
-            height={300}
-            className="animate-up-down"
-          />
-        </div>
-
-        <div className="w-full pr-0 text-center lg:text-left lg:w-1/2 lg:pr-14">
-          <div className={showDetail ? "h-full" : "h-[220px] overflow-hidden"}>
+    <section className="w-full text-white px-10" id="nft">
+      <div className="min-h-screen flex flex-col items-end justify-center md:items-start">
+        <div className="w-1/4 md:w-1/2 lg:w-1/3">
+          <div className={showDetail ? "h-full" : "h-[200px] overflow-hidden"}>
             <h3 className="head-text">3D NFT Characters:</h3>
             <h4 className="sub-head-text">Unleash Your Unique Avatar</h4>
             <p className="para-text">

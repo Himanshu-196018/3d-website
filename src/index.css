@@ -9,8 +9,16 @@
 }
 
 body {
-  background-color: gray;
+  background-color: black;
   font-family: Nunito, sans-serif;
+}
+
+#video {
+  height: 115vh;
+  width: 100vw;
+  position: fixed;
+  left: 0;
+  top: 0;
 }
 
 .menu-btn-style,
